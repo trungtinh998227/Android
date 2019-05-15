@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_user"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="50dp"
+        app:srcCompat="@drawable/student" />
+
+    <EditText
+        android:id="@+id/et_username"
+        android:drawableLeft="@drawable/ic_action_name"
+        android:hint="Username"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/iv_user"
+        android:layout_marginTop="90dp"
+        android:ems="10"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:background="#11000000"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/et_password"
+        android:drawableLeft="@drawable/ic_password"
+        android:hint="Password"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/et_username"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:background="#11000000"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/button_login_register_green"
+        android:text="Login" />
+
+    <TextView
+        android:id="@+id/tv_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textSize="18sp"
+        android:textColor="#ffffff"
+        android:text="Haven't account? Register here" />
+
+</RelativeLayout>

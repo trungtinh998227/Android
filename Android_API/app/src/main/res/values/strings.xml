@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">mini_project</string>
+    <string name="title">Login Failed</string>
+    <string name="msg">You should register first?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="enter_login_infor">Please enter your username and password</string>
+</resources>
