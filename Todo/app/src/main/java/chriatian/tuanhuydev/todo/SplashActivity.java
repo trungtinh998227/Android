@@ -33,7 +33,7 @@ import Models.User;
 import static android.view.animation.AnimationUtils.*;
 
 public class SplashActivity extends AppCompatActivity {
-    public static final String URL="http://192.168.1.31:3010/api/dev";
+    public static final String URL="http://192.168.1.11:3010/api/dev";
     private ImageView icon;
     private Button register;
     private TextView logan;
@@ -66,7 +66,7 @@ public class SplashActivity extends AppCompatActivity {
     }
     private void getUser(){
         RequestQueue queue = Volley.newRequestQueue(this);
-        JsonArrayRequest arrayRequest = new JsonArrayRequest(Request.Method.GET, URL, new Response.Listener<JSONArray>() {
+        JsonArrayRequest arrayRequest = new JsonArrayRequest(Request.Method.GET, URL,null, new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray response) {
                 for (int i = 0; i < response.length(); i++) {
