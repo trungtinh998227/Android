@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/formId"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/ic_login_register_background"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="false"
+        android:layout_marginTop="15dp"
+        android:contentDescription="@string/login_icon"
+        app:srcCompat="@mipmap/ic_register" />
+    <TextView
+        android:id="@+id/registerID_icon"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/icon"
+        android:text="@string/register"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/user_name"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/registerID_icon"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="false"
+        android:layout_marginLeft="45dp"/>
+
+    <EditText
+        android:id="@+id/usernameID"
+        android:layout_width="325dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/username"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="45dp"
+        android:background="@drawable/input_style"
+        android:hint="@string/input_your_user_name"
+        android:importantForAutofill="no"
+        android:inputType=""
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        tools:targetApi="o" />
+    <TextView
+        android:id="@+id/pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pass_word"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_below="@id/usernameID"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="45dp" />
+
+    <EditText
+        android:id="@+id/passID"
+        android:layout_width="322dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pass"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="45dp"
+        android:background="@drawable/input_style"
+        android:hint="@string/input_pass"
+        android:importantForAutofill="no"
+        android:inputType="textPassword"
+        android:maxLength="10"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        tools:targetApi="o" />
+    <TextView
+        android:id="@+id/fullname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/full_name"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/passID"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="45dp" />
+
+    <EditText
+        android:id="@+id/fullnameID"
+        android:layout_width="325dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fullname"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="45dp"
+        android:background="@drawable/input_style"
+        android:hint="@string/input_your_name"
+        android:inputType=""
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white" />
+    <TextView
+        android:id="@+id/birth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/birth"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/fullnameID"
+        android:layout_centerHorizontal="false"
+        android:layout_marginLeft="45dp"/>
+
+    <EditText
+        android:id="@+id/birthID"
+        android:layout_width="325dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/birth"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="45dp"
+        android:background="@drawable/input_style"
+        android:hint="@string/input_birthday"
+        android:inputType="date|datetime"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white" />
+
+    <Button
+        android:id="@+id/registerID"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_below="@+id/birthID"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:padding="5dp"
+        android:background="@drawable/bg_button"
+        android:text="@string/register"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+</RelativeLayout>
