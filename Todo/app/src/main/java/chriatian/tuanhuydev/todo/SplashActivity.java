@@ -45,7 +45,6 @@ public class SplashActivity extends AppCompatActivity {
         icon = findViewById(R.id.icon);
         register = findViewById(R.id.registerID);
         logan = findViewById(R.id.loganId);
-        getUser();
         @SuppressLint("ResourceType")
         Animation fadein = loadAnimation(this,R.animator.fade_in);
         logan.setAnimation(fadein);
@@ -55,13 +54,10 @@ public class SplashActivity extends AppCompatActivity {
         @SuppressLint("ResourceType")
         Animation fromtop = loadAnimation(this,R.animator.fromtop);
         icon.setAnimation(fromtop);
+        getUser();
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                for(int i=0;i<users.size();i++)
-                {
-                    Log.d("-------LK-----",users.get(i).toString());
-                }
                 Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
                 intent.putExtra("UserData", (Serializable) users);
                 startActivity(intent);
@@ -73,17 +69,16 @@ public class SplashActivity extends AppCompatActivity {
         JsonArrayRequest arrayRequest = new JsonArrayRequest(Request.Method.GET, URL, new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray response) {
-                for (int i=0; i< response.length();i++){
+                for (int i = 0; i < response.length(); i++) {
                     try {
-                        User newUser= new User();
+                        User newUser = new User();
                         JSONObject object = response.getJSONObject(i);
                         newUser.setUserName(object.getString("username"));
                         newUser.setPassword(object.getString("password"));
                         newUser.setBirthday(object.getString("birth"));
                         newUser.setName(object.getString("fullname"));
-                        users.add(i,newUser);
-                    }
-                    catch (JSONException e) {
+                        users.add(newUser);
+                    } catch (JSONException e) {
                         e.getMessage();
                     }
                 }
@@ -91,7 +86,7 @@ public class SplashActivity extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Log.d("------Error------", error.getMessage());
+                Log.d("------errrrorrr-----",error.toString());
             }
         });
         queue.add(arrayRequest);

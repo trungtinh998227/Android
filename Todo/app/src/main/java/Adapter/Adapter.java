@@ -3,7 +3,6 @@ package Adapter;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,7 +31,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
-        //Log.d("---------Infor--------",listUser.get(i).toString());
         viewHolder.username.setText(String.format("UserName: %s", listUser.get(i).getUserName()));
         viewHolder.pass.setText(String.format("Password: %s", listUser.get(i).getPassword()));
         viewHolder.birth.setText(String.format("Birthday: %s", listUser.get(i).getBirthday()));
